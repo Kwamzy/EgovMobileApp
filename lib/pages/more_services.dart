@@ -5,6 +5,7 @@ import 'package:egovservice/pages/more_services_pack/contact_us.dart';
 import 'package:egovservice/pages/more_services_pack/legal.dart';
 import 'package:egovservice/pages/more_services_pack/reset_password_1.dart';
 import 'package:egovservice/pages/notification_page.dart';
+import 'package:egovservice/pages/profile_page.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -31,6 +32,12 @@ class MoreServices extends StatelessWidget{
           icon: CircleAvatar(
             backgroundImage: AssetImage("assets/images/profile_pic2.png"),
           ), onPressed: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => Profile_Page(),
+              )
+          );
           print("This should send you to the profile page");
         },
         ),

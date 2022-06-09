@@ -9,8 +9,11 @@ class NotificationPage extends StatelessWidget{
   Widget build(BuildContext context) {
   return Scaffold(
     appBar: AppBar(
-      leading: BackButton(
-        color: Palette.activeColor,
+      leading: IconButton(
+        icon: Icon(
+          Icons.arrow_back_outlined,
+          color: Palette.activeColor,
+        ),
         onPressed: (){
           Navigator.of(context).maybePop();
         },

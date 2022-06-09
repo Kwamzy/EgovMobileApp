@@ -40,8 +40,11 @@ class _Make_PaymentPageState extends State<Make_PaymentPage>{
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        leading: BackButton(
-          color: Palette.activeColor,
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back_outlined,
+            color: Palette.activeColor,
+          ),
           onPressed: (){
             Navigator.of(context).maybePop();
           },
@@ -71,84 +74,48 @@ class _Make_PaymentPageState extends State<Make_PaymentPage>{
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
 
-        Container(
+            SizedBox(height: 20,),
 
-        padding: EdgeInsets.only(top: 25, bottom: 0),
-
-          child: RichText(
-              text:
-              TextSpan(
-                  text: "Customer Name",
-                  style: TextStyle(
-                      color: Palette.activeColor,
-                      fontSize: 12,
-                      fontFamily: "Roboto"
-
-                  ),
-                  children: [
-                    TextSpan(
-                        text: "\n"
-                    ),
-                    TextSpan(
-                        text: "\n"
-                    ),
-                    TextSpan(
-                        text: widget.name,
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                          color: Colors.black,
-                        ))
-                  ]
-              )
-          ),
-
-      ),
-
-      SizedBox(height: 15,),
-      Divider(thickness: 1.5,),
-
-            SizedBox(height: 15,),
-
-      Container(
-            child: RichText(
-
-                text:
-                TextSpan(
-                    text: "Customer Code",
-                    style: TextStyle(
-                        color: Palette.activeColor,
-                        fontSize: 12,
-                        fontFamily: "Roboto"
-
-                    ),
-                    children: [
-                      TextSpan(
-                          text: "\n",
-                        style: TextStyle(
-                        ),
-                      ),
-                      TextSpan(
-                        text: "\n",
-                        style: TextStyle(
-                        ),
-                      ),
-                      TextSpan(
-                          text: widget.code,
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500,
-                            color: Colors.black,
-                          ))
-                    ]
-                )
+            TextField(
+              enabled: false,
+              decoration: InputDecoration(
+                labelText: "Customer Name",
+                labelStyle: TextStyle(
+                  fontFamily: "Roboto",
+                  color: Palette.activeColor,
+                ),
+                floatingLabelBehavior: FloatingLabelBehavior.always,
+                hintText: widget.name,
+                hintStyle: TextStyle(
+                  fontSize: 16,
+                  fontFamily: "Roboto",
+                  color: Colors.black,
+                ),
+              ),
             ),
-      ),
 
             SizedBox(height: 15,),
-            Divider(thickness: 1.5,),
 
-            SizedBox(height: 15,),
+            TextField(
+              enabled: false,
+              decoration: InputDecoration(
+                labelText: "Customer Code",
+                labelStyle: TextStyle(
+                  fontFamily: "Roboto",
+                  color: Palette.activeColor,
+                ),
+                floatingLabelBehavior: FloatingLabelBehavior.always,
+                hintText: widget.code,
+                hintStyle: TextStyle(
+                  fontSize: 16,
+                  fontFamily: "Roboto",
+                  color: Colors.black,
+                ),
+              ),
+            ),
+
+
+            SizedBox(height: 20,),
 
              DropdownButtonFormField<String>(
                value: value,
@@ -167,7 +134,7 @@ class _Make_PaymentPageState extends State<Make_PaymentPage>{
 
               ),
 
-            SizedBox(height: 15,),
+            SizedBox(height: 20,),
 
             TextFormField(
               enabled: true,
@@ -192,7 +159,7 @@ class _Make_PaymentPageState extends State<Make_PaymentPage>{
 
             ),
 
-            SizedBox(height: 15,),
+            SizedBox(height: 20,),
 
             TextFormField(
               keyboardType: TextInputType.number,

@@ -14,6 +14,8 @@ class Palette {
   static const Color tertiaryActive = Color(0xFFC87F2B);
   static const Color searchBar = Color(0xFFF0F0F0);
 
+
+
 }
 
 

@@ -67,8 +67,14 @@ class _Change_PasswordState extends State<Change_Password>{
         centerTitle: true,
         backgroundColor: Colors.white,
         elevation: 0.2,
-        leading: BackButton(
-          color: Palette.activeColor,
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back_outlined,
+            color: Palette.activeColor,
+          ),
+          onPressed: (){
+            Navigator.of(context).maybePop();
+          },
         ),
 
       ),

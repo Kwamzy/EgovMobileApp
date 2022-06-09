@@ -14,10 +14,13 @@ class Contact_Us extends StatelessWidget{
         centerTitle: true,
         backgroundColor: Colors.white,
         elevation: 0.1,
-        leading: BackButton(
-          color: Palette.activeColor,
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back_outlined,
+            color: Palette.activeColor,
+          ),
           onPressed: (){
-            Navigator.of(context).maybePop();;
+            Navigator.of(context).maybePop();
           },
         ),
         title: Text(

@@ -1,6 +1,7 @@
 import 'package:egovservice/config/palette.dart';
 import 'package:egovservice/list_of_customers.dart';
 import 'package:egovservice/pages/notification_page.dart';
+import 'package:egovservice/pages/profile_page.dart';
 import 'package:egovservice/pages/searchwidget.dart';
 import 'package:egovservice/payment_pack/confirm_customer_details.dart';
 import 'package:flutter/cupertino.dart';
@@ -40,6 +41,12 @@ class Select_Customer_For_PaymentState extends State<Select_Customer_For_Payment
           icon: CircleAvatar(
             backgroundImage: AssetImage("assets/images/profile_pic2.png"),
           ), onPressed: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => Profile_Page(),
+              )
+          );
           print("This should send you to the profile page");
         },
         ),

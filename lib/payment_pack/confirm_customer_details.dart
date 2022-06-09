@@ -52,8 +52,11 @@ class _Confirm_Customer_DetailsState extends State<Confirm_Customer_Details>{
       backgroundColor: Colors.white,
 
       appBar: AppBar(
-        leading: BackButton(
-          color: Palette.activeColor,
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back_outlined,
+            color: Palette.activeColor,
+          ),
           onPressed: (){
             Navigator.of(context).maybePop();
           },

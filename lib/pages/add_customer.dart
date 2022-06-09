@@ -67,8 +67,14 @@ class _Add_CustomerState extends State<Add_Customer>{
         centerTitle: true,
         backgroundColor: Colors.white,
         elevation: 0.0,
-        leading: BackButton(
-          color: Palette.activeColor,
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back_outlined,
+            color: Palette.activeColor,
+          ),
+          onPressed: (){
+            Navigator.of(context).maybePop();
+          },
         ),
 
       ),

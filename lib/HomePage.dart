@@ -5,6 +5,7 @@ import 'package:egovservice/pages/more_services.dart';
 import 'package:egovservice/pages/more_services_pack/legal.dart';
 import 'package:egovservice/pages/payment_page.dart';
 import 'package:egovservice/pages/notification_page.dart';
+import 'package:egovservice/pages/profile_page.dart';
 import 'package:egovservice/pages/searchwidget.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
@@ -63,6 +64,12 @@ class _HomePageState extends State<HomePage> {
           icon: CircleAvatar(
             backgroundImage: AssetImage("assets/images/profile_pic2.png"),
           ), onPressed: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => Profile_Page(),
+                )
+            );
           print("This should send you to the profile page");
         },
         ),
